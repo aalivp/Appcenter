@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.preserve_path = 'Appcenter/README.md'
 
   s.default_subspecs = 'Analytics', 'Crashes'
-
+  puts "before subscripts run"
   s.subspec 'Core' do |ss|
     ss.frameworks = 'Foundation', 'SystemConfiguration'
     ss.ios.frameworks = 'CoreTelephony', 'UIKit'
