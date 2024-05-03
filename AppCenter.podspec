@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
   s.source = { :http => "https://github.com/aalivp/Appcenter.git" }
-
+  s.resource_bundles = { "AppCenter" => ["AppCenter/PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
 
   s.default_subspecs = 'Analytics', 'Crashes'
@@ -52,6 +52,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
+    s.resource_bundles = { "AppCenterAnalytics" => ["Appcenter/AppCenterAnalytics/PrivacyInfo.xcprivacy"] }
     ss.vendored_frameworks = "Appcenter/AppCenterAnalytics.xcframework"
   end
 
@@ -59,6 +60,7 @@ Pod::Spec.new do |s|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
+    s.resource_bundles = { "AppCenterCrashes" => ["Appcenter/AppCenterCrashes/PrivacyInfo.xcprivacy"] }
     ss.vendored_frameworks = "Appcenter/AppCenterCrashes.xcframework"
   end
 
