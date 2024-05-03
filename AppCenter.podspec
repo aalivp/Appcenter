@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.10'
-  s.name              = 'Appcenter'
+  s.name              = 'AppCenter'
   s.version           = '5.0.4'
 
   s.summary           = 'Visual Studio App Center is your continuous integration, delivery and learning solution for iOS and macOS apps.'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
-  s.source = { :http => "https://github.com/aalivp/Appcenter.git" }
+  s.source = { :http => "https://github.com/aalivp/Appcenter/blob/main/AppCenter-SDK-Apple-PrivacyManifest.zip" }
 
   # s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework//PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
