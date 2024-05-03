@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '11.0'
   s.source = { :http => "https://github.com/aalivp/Appcenter/blob/main/AppCenter-SDK-Apple-PrivacyManifest.zip" }
 
-  s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter/PrivacyInfo.xcprivacy"] }
+  # s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework//PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
 
   s.default_subspecs = 'Analytics', 'Crashes'
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     ss.tvos.frameworks = 'UIKit'
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
-    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundles = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
   end
 
  s.subspec 'Analytics' do |ss|
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundles = { 'AppCenterAnalytics' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework"
   end
 
@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
-    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundles = { 'AppCenterCrashes' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework"
   end
 
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundles = { 'AppCenterDistribute' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
     ss.ios.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework"
  end
 
