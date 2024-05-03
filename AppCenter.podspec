@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenterDistributeResources' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
     ss.ios.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework"
  end
 
