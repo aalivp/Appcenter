@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
     ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
+    puts "core run"
   end
 
  s.subspec 'Analytics' do |ss|
