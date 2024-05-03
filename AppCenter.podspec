@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     ss.tvos.frameworks = 'UIKit'
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
-    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
   end
 
  s.subspec 'Analytics' do |ss|
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenterAnalytics/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework"
   end
 
@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
-    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenterCrashes/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework"
   end
 
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenterDistribute/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
     ss.ios.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework"
  end
 
