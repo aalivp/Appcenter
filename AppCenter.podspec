@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
-  s.source = { :http => "https://github.com/aalivp/Appcenter/AppCenter-SDK-Apple-5.0.4.zip" }
+  s.source = { :http => "https://github.com/aalivp/Appcenter/blob/main/AppCenter-SDK-Apple-5.0.4.zip" }
   s.resource_bundles = { "AppCenter" => ["AppCenter/PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
 
