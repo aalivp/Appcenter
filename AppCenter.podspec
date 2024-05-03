@@ -44,6 +44,7 @@ Pod::Spec.new do |s|
     ss.tvos.frameworks = 'UIKit'
     ss.vendored_frameworks = "Appcenter/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
+    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
   end
 
  s.subspec 'Analytics' do |ss|
@@ -52,7 +53,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    s.resource_bundles = { "AppCenterAnalytics" => ["Appcenter/AppCenterAnalytics/PrivacyInfo.xcprivacy"] }
+    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenterAnalytics.xcframework"
   end
 
@@ -60,7 +61,7 @@ Pod::Spec.new do |s|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
-    s.resource_bundles = { "AppCenterCrashes" => ["Appcenter/AppCenterCrashes/PrivacyInfo.xcprivacy"] }
+    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
     ss.vendored_frameworks = "Appcenter/AppCenterCrashes.xcframework"
   end
 
@@ -69,7 +70,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.ios.resource_bundle = { 'AppCenterDistributeResources' => ['Appcenter/AppCenterDistributeResources.bundle/*.lproj'] }
+    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
     ss.ios.vendored_frameworks = "Appcenter/AppCenterDistribute.xcframework"
  end
 
