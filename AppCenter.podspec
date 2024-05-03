@@ -25,13 +25,13 @@ Pod::Spec.new do |s|
   s.documentation_url = "https://docs.microsoft.com/en-us/appcenter/sdk"
   s.social_media_url = 'https://twitter.com/vsappcenter'
 
-  s.license           = { :type => 'MIT', :file => 'AppCenter-SDK-Apple/LICENSE' }
+  s.license           = { :type => 'MIT', :file => 'AppCenter/LICENSE' }
   s.author            = { 'Microsoft' => 'appcentersdk@microsoft.com' }
 
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
-  s.source = { :http => "https://github.com/microsoft/appcenter-sdk-apple/releases/download/#{s.version}/AppCenter-SDK-Apple-XCFramework-#{s.version}.zip" }
+  s.source = { :http => "https://github.com/aalivp/Appcenter.git" }
 
   s.preserve_path = 'Appcenter/README.md'
 
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.ios.resource_bundle = { 'AppCenterDistributeResources' => ['AppCenter-SDK-Apple/AppCenterDistributeResources.bundle/*.lproj'] }
+    ss.ios.resource_bundle = { 'AppCenterDistributeResources' => ['Appcenter/AppCenterDistributeResources.bundle/*.lproj'] }
     ss.ios.vendored_frameworks = "Appcenter/AppCenterDistribute.xcframework"
  end
 
