@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     ss.tvos.frameworks = 'UIKit'
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
-    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
   end
 
  s.subspec 'Analytics' do |ss|
