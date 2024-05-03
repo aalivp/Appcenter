@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '11.0'
   s.source = { :http => "https://github.com/microsoft/appcenter-sdk-apple/releases/download/#{s.version}/AppCenter-SDK-Apple-XCFramework-#{s.version}.zip" }
 
-  s.resource_bundles = { "AppCenter" => ["AppCenter/PrivacyInfo.xcprivacy"] }
+  s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter/PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
 
   s.default_subspecs = 'Analytics', 'Crashes'
