@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '11.0'
   s.source = { :http => "https://github.com/microsoft/appcenter-sdk-apple/releases/download/#{s.version}/AppCenter-SDK-Apple-XCFramework-#{s.version}.zip" }
 
-  s.preserve_path = 'AppCenter-SDK-Apple/README.md'
+  s.preserve_path = 'Appcenter/README.md'
 
   s.default_subspecs = 'Analytics', 'Crashes'
 
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'CoreTelephony', 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.vendored_frameworks = "AppCenter-SDK-Apple/AppCenter.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
   end
 
@@ -52,14 +52,14 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.vendored_frameworks = "AppCenter-SDK-Apple/AppCenterAnalytics.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenterAnalytics.xcframework"
   end
 
   s.subspec 'Crashes' do |ss|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
-    ss.vendored_frameworks = "AppCenter-SDK-Apple/AppCenterCrashes.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenterCrashes.xcframework"
   end
 
  s.subspec 'Distribute' do |ss|
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
     ss.ios.resource_bundle = { 'AppCenterDistributeResources' => ['AppCenter-SDK-Apple/AppCenterDistributeResources.bundle/*.lproj'] }
-    ss.ios.vendored_frameworks = "AppCenter-SDK-Apple/AppCenterDistribute.xcframework"
+    ss.ios.vendored_frameworks = "Appcenter/AppCenterDistribute.xcframework"
  end
 
 end
