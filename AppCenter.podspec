@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
-  s.source = { :http => "https://github.com/aalivp/Appcenter/tree/main/AppCenter-SDK-Apple-PrivacyManifest" }
+  s.source = { :http => "https://www.dropbox.com/scl/fi/tdwdzp1nqp48cne5k9zjj/AppCenter-SDK-Apple-PrivacyManifest.zip?rlkey=sqkxmztz8ujv7qyfufdlk60wb&e=3&st=rxsmf40l&dl=1" }
 
   # s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework//PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
