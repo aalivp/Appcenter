@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
-  s.source = { :http => "https://github.com/aalivp/Appcenter/blob/main/AppCenter-SDK-Apple-PrivacyManifest" }
+  s.source = { :http => "https://github.com/aalivp/Appcenter/tree/main/AppCenter-SDK-Apple-PrivacyManifest" }
 
   # s.resource_bundles = { "AppCenter" => ["Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework//PrivacyInfo.xcprivacy"] }
   s.preserve_path = 'Appcenter/README.md'
@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
     ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
+
     puts "core run"
   end
 
