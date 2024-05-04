@@ -43,9 +43,9 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'CoreTelephony', 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenter.xcframework"
     ss.libraries = 'z', 'sqlite3'
-    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
+    ss.resource_bundle = { 'AppCenter' => 'Appcenter/AppCenter.xcframework/PrivacyInfo.xcprivacy' }
 
     puts "core run"
   end
@@ -56,16 +56,16 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.osx.frameworks = 'AppKit'
     ss.tvos.frameworks = 'UIKit'
-    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
-    ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterAnalytics.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenterAnalytics.xcframework"
+    ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
   end
 
   s.subspec 'Crashes' do |ss|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
     ss.libraries = 'z', 'c++'
-    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
-    ss.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterCrashes.xcframework"
+    ss.vendored_frameworks = "Appcenter/AppCenterCrashes.xcframework"
+    ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
   end
 
  s.subspec 'Distribute' do |ss|
@@ -73,8 +73,8 @@ Pod::Spec.new do |s|
     ss.frameworks = 'Foundation'
     ss.ios.frameworks = 'UIKit'
     ss.ios.weak_frameworks = 'SafariServices', 'AuthenticationServices'
-    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
-    ss.ios.vendored_frameworks = "Appcenter/AppCenter-SDK-Apple-PrivacyManifest/AppCenterDistribute.xcframework"
+    ss.ios.vendored_frameworks = "Appcenter/AppCenterDistribute.xcframework"
+    ss.resource_bundle = { 'AppCenterDistribute' => 'Appcenter/AppCenterDistribute.xcframework/PrivacyInfo.xcprivacy' }
  end
 
 end
