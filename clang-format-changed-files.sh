@@ -8,7 +8,7 @@
 upstream=$(git remote -v | grep -i "microsoft/" | awk '{print $1}' | uniq)
 git fetch $upstream
 i=0
-for modified_file in $(git diff $upstream/develop --diff-filter=ACMR --name-only -- *.h *.m *.mm)
+for modified_file in $(git diff $upstream/main --diff-filter=ACMR --name-only -- *.h *.m *.mm)
 do
   if [[ $modified_file != *"Vendor/"* ]]
   then

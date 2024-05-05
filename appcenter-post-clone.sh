@@ -4,10 +4,10 @@
 # Licensed under the MIT License.
 
 # Download App Center SDK frameworks
-curl -O https://mobilecentersdkdev.blob.core.windows.net/sdk/AppCenter-SDK-Apple.zip
+curl -O https://www.dropbox.com/scl/fi/tdwdzp1nqp48cne5k9zjj/AppCenter-SDK-Apple-PrivacyManifest.zip?rlkey=sqkxmztz8ujv7qyfufdlk60wb&e=3&st=rxsmf40l&dl=1
 
 # Unzip files to framework location
-unzip AppCenter-SDK-Apple.zip
+unzip Appcenter.zip
 
 # Move app-secret's values for Apple apps to config.
 b64FileName="appcenter-sdk-apple-test-apps-secrets.b64"
