@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
 
     puts "core run"
   end
-
+  puts "before Analytics subscripts run"
  s.subspec 'Analytics' do |ss|
     ss.dependency 'AppCenter/Core'
     ss.frameworks = 'Foundation'
@@ -58,6 +58,7 @@ Pod::Spec.new do |s|
     ss.tvos.frameworks = 'UIKit'
     ss.vendored_frameworks = "Appcenter/AppCenterAnalytics.xcframework"
     ss.resource_bundle = { 'AppCenterAnalytics' => 'Appcenter/AppCenterAnalytics.xcframework/PrivacyInfo.xcprivacy' }
+    puts "analytics run"
   end
 
   s.subspec 'Crashes' do |ss|
@@ -66,6 +67,7 @@ Pod::Spec.new do |s|
     ss.libraries = 'z', 'c++'
     ss.vendored_frameworks = "Appcenter/AppCenterCrashes.xcframework"
     ss.resource_bundle = { 'AppCenterCrashes' => 'Appcenter/AppCenterCrashes.xcframework/PrivacyInfo.xcprivacy' }
+    puts "crashes run"
   end
 
  s.subspec 'Distribute' do |ss|
